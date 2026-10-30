@@ -12,7 +12,6 @@
 
 ![Project banner featuring MRI input, annotated ground truth, model prediction and tumour overlay](assets/portfolio-banner.png)
 
-**[Results](#results)** · **[Approach](#technical-approach)** · **[Visuals](#visual-results)** · **[Notebooks](#explore-the-code)** · **[Reproduction](#getting-started)**
 
 </div>
 
@@ -66,19 +65,19 @@ flowchart LR
 
 ![Input MRI scans, true segmentation masks, predicted masks and overlays for three dissertation examples](assets/segmentation-predictions-vs-ground-truth.png)
 
-*Original dissertation figure, p. 28. Each row shows an MRI input, ground-truth mask, prediction and colour overlay. Examples are qualitative, not a replacement for numerical evaluation.*
+*Each row shows an MRI input, ground-truth mask, prediction and colour overlay. Examples are qualitative, not a replacement for numerical evaluation.*
 
 ### 2. Model architecture
 
 ![ResNet50 encoder and custom U-Net decoder linked by skip connections](assets/resnet50-unet-architecture.png)
 
-*Original dissertation model-architecture figure, p. 22: frozen ResNet50 feature extraction, multi-scale skip connections and decoder reconstruction.*
+*Frozen ResNet50 feature extraction, multi-scale skip connections and decoder reconstruction.*
 
 ### 3. Training and validation curves
 
 ![Segmentation training and validation accuracy and loss over 50 epochs](assets/training-validation-curves.png)
 
-*Dissertation p. 26. Final reported **training accuracy: 99.54%** and **validation accuracy: 99.57%**. The independent test-set accuracy is reported separately below.*
+*Final reported **training accuracy: 99.54%** and **validation accuracy: 99.57%**. The independent test-set accuracy is reported separately below.*
 
 <details>
 <summary><strong>More images: MRI modalities and contrast enhancement</strong></summary>
@@ -87,13 +86,11 @@ flowchart LR
 
 ![MRI modalities in axial, coronal and sagittal views](assets/mri-modalities.png)
 
-*Original dissertation figure, p. 19.*
-
 **DSIHE contrast enhancement**
 
 ![Original brain MRI slices compared with DSIHE-enhanced images](assets/dsihe-contrast-enhancement.jpeg)
 
-*Original dissertation figure, p. 20. DSIHE was chosen over CLAHE based on the visual comparison reported in the study.*
+*DSIHE was chosen over CLAHE based on the visual comparison reported in the study.*
 
 </details>
 
@@ -162,14 +159,5 @@ The repository is organized as a series of research notebooks. The following nam
 - **Regional segmentation:** ET and TC achieved lower reported Dice scores than whole-tumour segmentation.
 - **Evaluation transparency:** future work should explicitly validate patient-level separation and out-of-fold fitting of feature transformations—especially t-SNE—to establish robust generalization.
 - **Next steps:** evaluate more diverse datasets, improve the smaller-region segmentations, document a fully reproducible environment, and add a separate inference demonstration.
-
-## Author & attribution
-
-**Niranjana Sunish** · MSc Data Science, **University of Birmingham**, 2023–24  
-**Dissertation:** *A Comprehensive AI Framework for MRI-Based Multi-Class Brain Tumour Segmentation and Classification*  
-**Supervisor:** Dr. Mian Muhammad Hamayun  
-**GitHub:** [NiranjanaSunish](https://github.com/NiranjanaSunish)
-
-All MRI examples, training curves and architecture figures under `assets/` were extracted from the author's supplied MSc dissertation (pp. 19, 20, 22, 26, 28). The title banner is a graphic arrangement of the dissertation's segmentation sample images.
 
 **Academic research only:** This work is not a clinically validated medical device and must not be used for diagnosis or treatment decisions.
