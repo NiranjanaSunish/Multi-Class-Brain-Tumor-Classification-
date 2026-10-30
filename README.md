@@ -1,6 +1,4 @@
 
-# In Progress......
-
 # A Comprehensive AI Framework for MRI-Based Multi-Class Brain Tumor Classification
 
 ## Project Overview
